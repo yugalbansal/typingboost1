@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="3minute.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+          <div class="navbar">
+              <div class="logo"><a href="index.html">Typing Tutor</a></div>
+              <ul class="menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="word.html">Typing Lessons</a></li>
+                  <li><a href="index.html">Typing Tests</a></li>
+                  <li><a href="trickykeys.html">Tricky Keys</a></li>
+                  <li><a href="feedback.html">Feedback</a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="button">
+          <a href="#Home"><i class="fas fa-arrow-up"></i></a>
+      </div>
+  </header>
+  
+  <div class="lady">
+    <img class="lady-img" src="lady.svg" alt=""typing-tutor>
+  </div>
+  <div class="boy">
+    <img class="boy-img" src="gentleman.svg" alt=""typing-tutor>
+  </div>
+    
+    <div class="container">
+      <div class="stats">
+        <p>Time: <span id="timer">0s</span></p>
+        <p>Mistakes: <span id="mistakes">0</span></p>
+      </div>
+      <div
+        id="quote"
+        onmousedown="return false"
+        onselectstart="return false"
+      ></div>
+      <textarea
+        rows="3"
+        id="quote-input"
+        placeholder="Type here when the test starts.."
+      ></textarea>
+      <button id="start-test" onclick="startTest()">Start Test</button>
+      <button id="stop-test" onclick="displayResult()">Stop Test</button>
+      <div class="result">
+        <h3>Result</h3>
+        <div class="wrapper">
+          <p>Accuracy: <span id="accuracy"></span></p>
+          <p>Speed: <span id="wpm"></span></p>
+        </div>
+      </div>
+    </div>
+   
+    <!-- Script -->
+    <script src="3minute.js"></script>
+  </body>
+</html>

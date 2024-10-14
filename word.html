@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter Tool</title>
+    <link rel="stylesheet" href="word.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo"><a href="#">Typing Boost</a></div>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="word.html">Word Counter</a></li>
+                    <li><a href="test.html">Typing Tests</a></li>
+                    <li><a href="trickykeys.html">Tricky Keys</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 id="title">Word Counter Tool</h1>
+        <textarea id="textInput" placeholder="Enter your text here..."></textarea>
+        <button id="analyzeButton">Analyze Text</button>
+        <div id="results">
+            <h2>Results:</h2>
+            <p id="wordCount">Word Count: 0</p>
+            <p id="charCount">Character Count: 0</p>
+            <p id="sentenceCount">Sentence Count: 0</p>
+            <!-- <p id="readabilityScore">Readability Score: N/A</p>
+            <p id="passiveVoice">Passive Voice: N/A</p> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div id="upload_box">
+    <div class="file">
+    <label for="fileInput">Choose a text file:</label>
+    <input type="file" id="fileInput" accept=".txt">
+    <p id="wordCount"></p>
+    </div>
+    </div>
+    <script src="word.js"></script>
+</body>
+</html>
