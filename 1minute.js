@@ -127,7 +127,7 @@ window.onload = function() {
     };
     
     document.getElementById('not-agree-btn').onclick = function() {
-      window.location.href = 'home.html'; // Redirect to the homepage
+      window.location.href = 'index.html'; // Redirect to the homepage
     };
   }
 
