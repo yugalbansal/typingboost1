@@ -254,3 +254,64 @@ li:hover{
         top: 100px;
     }
 }
+/* Make nav bar responsive and adjust feedback button */
+@media (max-width: 768px) {
+    nav {
+        height: 60px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .navbar .logo a {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    nav .navbar .menu {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 10px;
+    }
+
+    nav .navbar .menu li {
+        margin-right: 10px;
+    }
+
+    nav .navbar .menu li a {
+        font-size: 14px;
+    }
+
+    /* Feedback button */
+    .button a {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        font-size: 14px;
+        padding: 7px 12px;
+        margin-left: auto;
+        background-color: #2980b9; /* Match nav bar color */
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+        z-index: 10;
+    }
+}
+
+/* Ensure button is visible on all screen sizes */
+.button a {
+    display: block;
+    text-align: center;
+    background-color: #2980b9; /* Color for the button */
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
