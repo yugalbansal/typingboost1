@@ -125,7 +125,6 @@ window.onload = () => {
   renderNewQuote();
 };
 
-<script>
   function isMobileDevice() {
       return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
   }
@@ -144,4 +143,4 @@ window.onload = () => {
           };
       }
   };
-</script>
+
