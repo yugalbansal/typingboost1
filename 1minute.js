@@ -25,11 +25,6 @@ function showLevel(level) {
   document.getElementById('level' + level).classList.add('active');
 }
 
-// Optionally, you can add exit behavior here
-function exit() {
-  alert("Exiting...");
-}
-
 // Display random quote from the array
 const renderNewQuote = () => {
   quote = getRandomQuote();
@@ -116,31 +111,30 @@ const startTest = () => {
   document.getElementById("stop-test").style.display = "block";
 };
 
-// Initialize the test when the window loads
-window.onload = () => {
+// Combine both functions into one window.onload
+window.onload = function() {
+  // Mobile popup logic
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  }
+
+  if (isMobileDevice()) {
+    // Show the popup for mobile users
+    document.getElementById('mobile-popup').style.display = 'flex';
+    
+    document.getElementById('agree-btn').onclick = function() {
+      document.getElementById('mobile-popup').style.display = 'none';
+    };
+    
+    document.getElementById('not-agree-btn').onclick = function() {
+      window.location.href = 'home.html'; // Redirect to the homepage
+    };
+  }
+
+  // Typing test initialization logic
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";
   document.getElementById("stop-test").style.display = "none";
   userInput.disabled = true;
   renderNewQuote();
 };
-
-  function isMobileDevice() {
-      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-  }
-// for mobile users
-  window.onload = function() {
-      if (isMobileDevice()) {
-          // Show the popup for mobile users
-          document.getElementById('mobile-popup').style.display = 'flex';
-          
-          document.getElementById('agree-btn').onclick = function() {
-              document.getElementById('mobile-popup').style.display = 'none';
-          };
-          
-          document.getElementById('not-agree-btn').onclick = function() {
-              window.location.href = 'home.html'; // Redirect to the homepage
-          };
-      }
-  };
-
