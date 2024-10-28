@@ -125,7 +125,26 @@ const startTest = () => {
 };
 
 // Initialize the test when the window loads
-window.onload = () => {
+window.onload = function() {
+  // Mobile popup logic
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  }
+
+  if (isMobileDevice()) {
+    // Show the popup for mobile users
+    document.getElementById('mobile-popup').style.display = 'flex';
+    
+    document.getElementById('agree-btn').onclick = function() {
+      document.getElementById('mobile-popup').style.display = 'none';
+    };
+    
+    document.getElementById('not-agree-btn').onclick = function() {
+      window.location.href = 'home.html'; // Redirect to the homepage
+    };
+  }
+
+  // Typing test initialization logic
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";
   document.getElementById("stop-test").style.display = "none";
